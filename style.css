@@ -245,7 +245,7 @@ strong {
     }
 
     .outer {
-        top: -30px;
+        top: -50px;
        position: relative;
     }
 
@@ -268,11 +268,7 @@ strong {
     }
 
     footer {
-        bottom: 60px;
-    }
-
-    body {
-        overflow-x: scroll;
+        bottom: 40px;
     }
 
     .dialog-content {
