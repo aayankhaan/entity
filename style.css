@@ -1,0 +1,283 @@
+body {
+    background: #20232d;
+    font-family: open sans, helvetica neue, lucida grande, Arial, Verdana, sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    width: 100vw;
+    height: 9vh;
+    margin: -22px;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+}
+
+footer p {
+    font-size: 15px;
+}
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    background-color: transparent;
+    position: relative;
+    z-index: 4;
+    margin: 0 auto;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./img/wp2940376.png);
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.outer img {
+    border-radius: 5px;
+    filter: brightness(70%);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+.hero h5 {
+    cursor: default;
+    font-size: 1rem;
+    animation: move 2s infinite;
+}
+
+h1 {
+    cursor: default;
+    font-size: 70px;
+    font-weight: 10;
+    text-shadow: 2px 2px 2px black;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+}
+
+strong {
+    color: red;
+}
+
+.button {
+    display: flex;
+    width: 600px;
+    height: 100px;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    justify-content: center;
+    margin: auto; 
+}
+
+.button a {
+    width: 140px;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: 0.1pc solid white;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a:hover {
+    border: 2px solid white;
+}
+
+#open-dialog {
+    transition: 0.2s;
+    background-color: #4ca3dd;
+    border: 2px solid  #4ca3dd;
+}
+
+#open-dialog:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.dialog {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.dialog-content {
+    width: 550px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #20232d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#dialog-vote a {
+    text-decoration: none;
+    color: white;
+}
+
+.background-dialog {
+    position: absolute;
+    top: 1;
+    left: 1;
+    width: 96%;
+    height: 92%;
+    background: url(./img/images.png);
+    background-size: cover;
+    background-position: center;
+    outline: 2px solid white ;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(60%);
+}   
+.close {
+    color: gray;
+    font-size: 50px;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* media queries */
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+
+    .button {
+        top: auto;
+    }
+    footer {
+        bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 614px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .outer {
+        top: -30px;
+       position: relative;
+    }
+
+    .button {
+        width: 120px;
+        height: auto;
+        flex-direction: column;
+        top: auto;
+        margin: 10px auto;
+        justify-content: center;
+    }
+
+    .button a {
+        width: 230px;
+        height: 20px;
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+        left: -70px;
+    }
+
+    footer {
+        bottom: 60px;
+    }
+
+    body {
+        overflow-x: scroll;
+    }
+
+    .dialog-content {
+        width: 270px;
+        height: 220px;
+    }
+
+}
